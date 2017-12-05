@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.2 (Python 3.6.1 on win32)" generated="20171205 13:43:34.575">
+<suite id="s1" name="Test Main" source="C:\Users\днс\Desktop\Моделирование систем\TestProg\TestSuite\test_main.robot">
+<kw name="Start Sikuli Process" library="SikuliLibrary" type="setup">
+<arguments>
+<arg>port=0</arg>
+</arguments>
+<msg timestamp="20171205 13:43:35.200" level="INFO">Starting process:
+java -jar C:\Python36\Lib\site-packages\SikuliLibrary\lib\SikuliLibrary.jar 57989 "C:\Users\днс\Desktop\Моделирование систем\TestProg\TestSuite"</msg>
+<msg timestamp="20171205 13:43:35.200" level="INFO">Start sikuli java process on port 57989</msg>
+<msg timestamp="20171205 13:43:37.868" level="INFO">Sikuli java process is started</msg>
+<status status="PASS" starttime="20171205 13:43:35.169" endtime="20171205 13:43:45.652"></status>
+</kw>
+<test id="s1-t1" name="Main Test">
+<kw name="Open and close process">
+<kw name="Add Image Path" library="SikuliLibrary">
+<doc>Add image path</doc>
+<arguments>
+<arg>${IMAGE_DIR}</arg>
+</arguments>
+<msg timestamp="20171205 13:43:45.699" level="INFO">Params: [C:\Users\днс\Desktop\Моделирование систем\TestProg\TestSuite]</msg>
+<status status="PASS" starttime="20171205 13:43:45.652" endtime="20171205 13:43:45.699"></status>
+</kw>
+<kw name="Double Click" library="SikuliLibrary">
+<doc>Double click image</doc>
+<arguments>
+<arg>find_button.jpg</arg>
+</arguments>
+<msg timestamp="20171205 13:43:47.404" level="INFO">Params: [find_button.jpg]</msg>
+<msg timestamp="20171205 13:43:47.404" level="INFO" html="yes">&lt;img src='sikuli_captured/sikuliximage-1512470626480.png'/&gt;
+[log] DOUBLE CLICK on L(73,747)@S(0)[0,0 1366x768] (580 msec)</msg>
+<status status="PASS" starttime="20171205 13:43:45.699" endtime="20171205 13:43:47.404"></status>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<doc>Input text. Image could be empty</doc>
+<arguments>
+<arg>find_string.jpg</arg>
+<arg>cmd</arg>
+</arguments>
+<msg timestamp="20171205 13:43:48.294" level="INFO">Params: [find_string.jpg, cmd]
+Input Text:
+cmd</msg>
+<msg timestamp="20171205 13:43:48.294" level="FAIL">java.lang.NullPointerException: Attempt to dereference null cv::Mat</msg>
+<status status="FAIL" starttime="20171205 13:43:47.404" endtime="20171205 13:43:48.294"></status>
+</kw>
+<status status="FAIL" starttime="20171205 13:43:45.652" endtime="20171205 13:43:48.294"></status>
+</kw>
+<tags>
+<tag>Smoke test</tag>
+</tags>
+<status status="FAIL" starttime="20171205 13:43:45.652" endtime="20171205 13:43:48.294" critical="yes">java.lang.NullPointerException: Attempt to dereference null cv::Mat</status>
+</test>
+<kw name="Terminate All Processes" library="Process" type="teardown">
+<doc>Terminates all still running processes started by this library.</doc>
+<arguments>
+<arg>kill=True</arg>
+</arguments>
+<status status="PASS" starttime="20171205 13:43:48.294" endtime="20171205 13:43:48.294"></status>
+</kw>
+<doc>Suite description</doc>
+<status status="FAIL" starttime="20171205 13:43:34.590" endtime="20171205 13:43:48.294"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1">Smoke test</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="Test Main">Test Main</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
